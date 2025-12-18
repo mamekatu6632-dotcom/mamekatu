@@ -15,9 +15,9 @@ public class Question2 {
 		System.out.println(floatNum);
 		double doubleNum = 0.0;//double型の変数　doubleNumを宣言 初期値0.0
 		System.out.println(doubleNum);
-		char letter = 'a';//char型の変数　letterを宣言　初期値"a"
+		char letter = '\u0000';//char型の変数　letterを宣言　初期値"a"
 		System.out.println(letter);
-		String letters = "";//String型の変数　lettersを宣言　初期値""
+		String letters = null;//String型の変数　lettersを宣言　初期値""
 		System.out.println(letters);
 		boolean isBoolean = false;//boolean型の変数　isBooleanを宣言　初期値false
 		System.out.println(isBoolean);
