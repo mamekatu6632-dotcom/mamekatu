@@ -80,15 +80,31 @@ public class Question1 {
 		int num = Integer.parseInt(numStr);
 
 		System.out.println(num + 10);
-		
-		int num3 =50;
-		
-		String str = String.valueOf(num3);
-		
-		System.out.println("得点" + str + "点");
-		
 
+		int num3 = 50;
+
+		String str = String.valueOf(num3);
+
+		System.out.println("得点" + str + "点");
+
+		int a = 10;
+		int b = 20;
+
+		boolean lesult = a < b;
+
+		System.out.println(lesult);
+
+		int x = 15 ,  y =10;
 		
+		String max = ( x >= y )? "OK" : "NG";
+		
+		System.out.println(max);
+		
+		String text = "私はJavaが好きです。Java楽しい！";
+		
+		String result = text.replace("Java", "Python");	
+		
+		System.out.println(result);
 
 	}
 
