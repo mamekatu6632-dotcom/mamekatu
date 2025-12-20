@@ -15,106 +15,81 @@ public class Question1 {
 		System.out.println(floatNum);
 		double doubleNum = 0.0;//double型の変数　doubleNumを宣言 初期値0.0
 		System.out.println(doubleNum);
-		char letter ='\u0000';//char型の変数　letterを宣言　初期値"a"
+		char letter = '\u0000';//char型の変数　letterを宣言　初期値"a"
 		System.out.println(letter);
 		String letters = null;//String型の変数　lettersを宣言　初期値""
 		System.out.println(letters);
 		boolean isBoolean = false;//boolean型の変数　isBooleanを宣言　初期値false
 		System.out.println(isBoolean);
-		
 
 		byteNum = 10; //数byteNumに10を代入
 		System.out.println(byteNum);
-		shortNum =100;//変数shortNumに100を代入
+		shortNum = 100;//変数shortNumに100を代入
 		System.out.println(shortNum);
 		intNum = 1000;//変数intNumに1000を代入
 		System.out.println(intNum);
-		longNum =10000;//変数longNumに10000を代入
+		longNum = 10000;//変数longNumに10000を代入
 		System.out.println(longNum);
-		floatNum =9.5f;//変数floatNumに9.5fを代入
+		floatNum = 9.5f;//変数floatNumに9.5fを代入
 		System.out.println(floatNum);
-		doubleNum =10.5;//変数doubleNumに10.5を代入
+		doubleNum = 10.5;//変数doubleNumに10.5を代入
 		System.out.println(doubleNum);
-		letter ='a';//変数letterに"a"を代入
+		letter = 'a';//変数letterに"a"を代入
 		System.out.println(letter);
 		letters = "ハロー";//変数lettersに"ハロー"を代入
 		System.out.println(letters);
 		isBoolean = true;//変数isBooleanにtrueを代入
 		System.out.println(isBoolean);
+
+		System.out.println(longNum + intNum + shortNum + byteNum);
+
+		System.out.println(byteNum * 2);
+
+		System.out.println(letter + letters + isBoolean);
+
+		System.out.println(longNum + intNum + shortNum + byteNum + byteNum + byteNum);
+
+		System.out.println(byteNum * shortNum * intNum * longNum);
+
+		System.out.println(doubleNum / shortNum);
+
+		System.out.println(shortNum - byteNum);
+
+		String name = "山田太郎";
+		System.out.println("こんにちは," + name + "さん!");
+
+		int age = 25;
+		System.out.println("年齢; " + age + "歳");
+
+		int num1 = 10;
+		int num2 = 5;
+		int sum = num1 + num2;
+		System.out.println(sum);
+
+		int score = 80;
+		score = score + 20;
+		System.out.println("最終スコア:" + score + "");
+
+		double price = 99.99;
+		int intprice = (int) price;
+
+		System.out.println("整数価格" + intprice + "");
+
+		String numStr = "123";
+
+		int num = Integer.parseInt(numStr);
+
+		System.out.println(num + 10);
 		
+		int num3 =50;
 		
-        longNum = 11110;
-		System.out.println(longNum);
-		byteNum = 20;
-		System.out.println(byteNum);
-		letters = "a ハロー　true";
-		System.out.println(letters);
-		int a = 1;
-		int b = 1;
-		int c = 1;
-		int d = 3;
-		int e = 0;
-		int f = a+b+c+d+e;
-		System.out.println(f);
-		int x= 1;
-		x += 1;
-		x += 1;
-		x += 3;
-		x += 0;
-		System.out.println(x);
+		String str = String.valueOf(num3);
 		
-	    intNum = 1+1+1+3+0;
-	    System.out.println(intNum);
-	    
-	    floatNum = 10000000000f;
-	    System.out.println(1*0*0*0*0*0*0*0*0*0*0);
-	    
-	    System.out.println(doubleNum/100);
-	    
-	    byteNum = 10;
-	    System.out.println(byteNum-100); 
-	    
-	    String name = "山田太郎";
-	    System.out.println("こんにちは,"+name+"さん!");
-	    
-	    int age = 25;
-	    System.out.println("年齢; "+age+"歳");
-	    
-	    int num1 = 10;
-	    int num2 = 5;
-	    int sum = num1+num2;
-	    System.out.println(sum);
-	    
-	    int score = 80;
-	    score = score+20;
-	    System.out.println("最終スコア:"+score+"");
-	    
-	     
-	    
-	
-	   
-	    
-	    
-	    
-	    
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				
-		
-		
-		
-		
-				
+		System.out.println("得点" + str + "点");
 		
 
-	
+		
+
 	}
 
 }
