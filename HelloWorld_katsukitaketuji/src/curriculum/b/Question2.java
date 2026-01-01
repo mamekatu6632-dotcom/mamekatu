@@ -51,16 +51,12 @@ public class Question2 {
 		if (!input5.trim().isEmpty()) {
 			int num = Integer.parseInt(input5);
 
-			{
-
-				if (num > 0) {
-					System.out.println("正の数です");
-				} else if (num == 0) {
-					System.out.println("0です");
-				} else if (num < 0) {
-					System.out.println("負の数です");
-				}
-
+			if (num > 0) {
+				System.out.println("正の数です");
+			} else if (num == 0) {
+				System.out.println("0です");
+			} else if (num < 0) {
+				System.out.println("負の数です");
 			}
 
 			System.out.println("いずれかの値を代入");
@@ -70,17 +66,14 @@ public class Question2 {
 			if (!input6.trim().isEmpty()) {
 				int value = Integer.parseInt(input6);
 
+				if (value % 2 == 0) {
+					System.out.println("偶数です");
+				} else
+
 				{
-
-					if (value % 2 == 0) {
-						System.out.println("偶数です");
-					} else
-
-					{
-						System.out.println("奇数です");
-					}
-
+					System.out.println("奇数です");
 				}
+
 				System.out.println("0から100のいずれかの値を代入");
 				String input = sc.nextLine();
 
