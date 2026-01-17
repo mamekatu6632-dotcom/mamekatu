@@ -1,10 +1,12 @@
 package curriculum.b;
 
+import java.util.Scanner;
+
 public class Question4 {
 
 	public static void main(String[] args) {
 
-		/*int[] number = {1, 2, 3, 4, 5};		
+		int[] number = {1, 2, 3, 4, 5};		
 		for(int i = 0; i<number.length; i++) {
 			System.out.println(number[i]);
 		}
@@ -18,14 +20,14 @@ public class Question4 {
 		for(int q = 0; q < number3.length; q++) {
 			sum += number3[q];
 			System.out.println(sum);
-		}*/
+		}
 
-		/*int[] number = { 12, 7, 9, 21, 5, 18 };
+		int[] number4 = { 12, 7, 9, 21, 5, 18 };
 		
-			int max = number[0];
-			int min = number[0];
+			int max = number4[0];
+			int min = number4[0];
 		
-			for (int n : number) {
+			for (int n : number4) {
 				if (n > max)
 					max = n;
 				if (n < min)
@@ -33,31 +35,31 @@ public class Question4 {
 		
 			}
 			System.out.println("最大値" + max);
-			System.out.println("最小値" + min);*/
+			System.out.println("最小値" + min);
 
-		/*int[] number = { 1, 2, 3, 4, 5 };
-		int[] doubled = new int[number.length];
+		int[] number5 = { 1, 2, 3, 4, 5 };
+		int[] doubled = new int[number5.length];
 		int index = 0;
 		
-		for (int n : number) {
+		for (int n : number5) {
 			doubled[index] = n * 2;
 			System.out.println(doubled[index]);
 			index++;
 			
-		}*/
+		}
 
-		/*Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
-		int[] number = { 4, 7, 10, 15, 20 };
+		int[] number6 = { 4, 7, 10, 15, 20 };
 		String input;
 		while (true) {
 			System.out.print("数字を入力");
 			input = sc.nextLine();
-			int sum = Integer.parseInt(input);
+			int sum1 = Integer.parseInt(input);
 		
 			boolean found = false;
-			for (int n : number) {
-				if (sum == n) {
+			for (int n : number6) {
+				if (sum1 == n) {
 					found = true;
 					break;
 		
@@ -65,51 +67,52 @@ public class Question4 {
 			}
 		
 			if (found) {
-				System.out.println(+sum + "は配列に含まれています");
+				System.out.println(+sum1 + "は配列に含まれています");
 			} else {
-				System.out.println(+sum + "は配列に含まれていません");
+				System.out.println(+sum1 + "は配列に含まれていません");
+				break;
 			}
 		
-		}*/
+		}
 
-		/*int[][] array = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+		int[][] array = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
 		for(int i = 0;i < array.length;i++) {
 			for(int j =0; j<array[i].length;j++) {
 				System.out.println(array[i][j]+"");
 			}
 			System.out.println();
-		}*/
+		}
 
-		/*int[][] array = { { 10, 20, 30, }, { 40, 50, 60 }, { 70, 80, 90 } };
-		int sum = 0;
-		for (int i = 0; i < array.length; i++) {
-			for (int p = 0; p < array[i].length; p++) {
-				sum += array[i][p];
+		int[][] array1 = { { 10, 20, 30, }, { 40, 50, 60 }, { 70, 80, 90 } };
+		int sum2 = 0;
+		for (int i = 0; i < array1.length; i++) {
+			for (int p = 0; p < array1[i].length; p++) {
+				sum += array1[i][p];
 			}
 		}
-		System.out.println(sum);*/
+		System.out.println(sum);
 
-		/*int[][] array = { { 12, 15, 8 }, { 6, 19, 25 }, { 30, 2, 10 } };
-		int max = array[0][0];
-		int min = array[0][0];
-		for (int[] row : array) {
+		int[][] array2 = { { 12, 15, 8 }, { 6, 19, 25 }, { 30, 2, 10 } };
+		int max1 = array2[0][0];
+		int min1 = array2[0][0];
+		for (int[] row : array2) {
 			for (int n : row) {
-				if (n > max) {
-					max = n;
+				if (n > max1) {
+					max1 = n;
 				}
-				if (n < min) {
+				if (n < min1) {
 
-					min = n;
+					min1 = n;
 				}
 
 			}
 
 		}
 		System.out.println("最大"+max);
-		System.out.println("最小"+min);*/
+		System.out.println("最小"+min);
 		
-		int[][][]array = {{{1,2},{3,4}},{{5,6,},{7,8}}};
-		for(int[][] plane : array) {
+		int[][][]array3 = {{{1,2},{3,4}},{{5,6,},{7,8}}};
+		for(int[][] plane : array3) {
 			for(int[] row : plane) {
 				for(int n : row) {
 					System.out.println(n);
