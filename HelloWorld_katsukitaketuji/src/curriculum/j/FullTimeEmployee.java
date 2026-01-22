@@ -10,6 +10,9 @@ public class FullTimeEmployee extends Employee {
 
 	@Override
 	public int costForDay(int hoursWorked) {
+		if (hoursWorked < 0) {
+			throw new IllegalArgumentException("hoursWorked must be >= 0");
+		}
 		int overtime = Math.max(0, hoursWorked - 8);
 		int regularHours = hoursWorked - overtime;
 

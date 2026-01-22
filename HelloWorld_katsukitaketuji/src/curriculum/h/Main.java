@@ -3,8 +3,8 @@ package curriculum.h;
 public class Main {
 
 	public static void main(String[] args) {
-		 Employee fullTime = new FullTimeEmployee("E001", "正社員");
-	        Employee partTime = new PartTimeEmployee("P001", "パート");
+		 Employee fullTime = new FullTimeEmployee("E001", "竹辻");
+	        Employee partTime = new PartTimeEmployee("P001", "竹本");
 
 	        int hours = 9;
 
