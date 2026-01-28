@@ -1,10 +1,14 @@
 package curriculum.c;
 
+import java.util.Scanner;
+
 public class Janken {
 
 	public static void main(String[] args) {
 
-		Player player = new Player();
+		Scanner scanner = new Scanner(System.in);
+
+		Player player = new Player(scanner);
 		CPU cpu = new CPU();
 
 		while (true) {
@@ -25,6 +29,8 @@ public class Janken {
 				System.out.println("あなたの負け。");
 			}
 		}
+
+		scanner.close();
 	}
 
 	private static String handToString(int hand) {
