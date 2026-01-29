@@ -7,24 +7,25 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 
-		Scanner sc = null;
-		FileWriter log = null;
+		try (
+				Scanner sc = new Scanner(System.in);
+				FileWriter log = new FileWriter("battle_log.txt")) {
 
-		try {
-			sc = new Scanner(System.in);
+			Random rand = new Random();
+
 			System.out.print("Player名を入力してください: ");
-			Player player = new Player(sc.nextLine());
+			Player player = new Player(sc.nextLine(), rand);
 
 			Daemon daemon = new Daemon("daemon_status.txt");
 
-			log = new FileWriter("battle_log.txt");
-
+			log.write("\n開始\n");
 			log.write(status(player));
 			log.write(status(daemon));
 
-			Character first, second;
+			Character first;
+			Character second;
 
 			if (player.sp > daemon.sp) {
 				first = player;
@@ -33,7 +34,7 @@ public class Main {
 				first = daemon;
 				second = player;
 			} else {
-				if (new Random().nextBoolean()) {
+				if (rand.nextBoolean()) {
 					first = player;
 					second = daemon;
 				} else {
@@ -45,6 +46,7 @@ public class Main {
 			log.write("\n先攻: " + first.name + "\n\n");
 
 			while (player.isAlive() && daemon.isAlive()) {
+
 				first.attack(second);
 				log.write(first.name + " の攻撃\n");
 				log.write(status(second));
@@ -58,27 +60,20 @@ public class Main {
 			}
 
 			log.write("\n終了\n");
-			log.write(player.isAlive()
-					? "勝者: " + player.name
-					: "勝者: " + daemon.name);
+			log.write(
+					player.isAlive()
+							? "勝者: " + player.name
+							: "勝者: " + daemon.name);
 
-		} finally {
-			if (log != null) {
-				try {
-					log.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-			if (sc != null) {
-				sc.close();
-			}
+		} catch (IOException e) {
+			System.out.println("ファイル処理でエラーが発生しました");
+			e.printStackTrace();
 		}
 	}
 
 	private static String status(Character c) {
 		return String.format(
-				"%s [hp=%d at=%d sp=%d]\n",
+				"%s [HP=%d AT=%d SP=%d]\n",
 				c.name, c.hp, c.at, c.sp);
 	}
 }

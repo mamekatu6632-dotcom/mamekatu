@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class Player extends Character {
 
-	private static final Random RAND = new Random();
-
-	public Player(String name) {
-		super(
-				name,
-				RAND.nextInt(51) + 50,
-				RAND.nextInt(11) + 5,
-				RAND.nextInt(8) + 3);
+	
+	  public Player(String name, Random rand) {
+	        super(
+	            name,
+	            rand.nextInt(51) + 50, // HP
+	            rand.nextInt(11) + 5,  // AT
+	            rand.nextInt(8) + 3    // SP
+	        );
+	    }
 	}
-}
